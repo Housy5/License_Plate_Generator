@@ -23,10 +23,11 @@ char * left_trim(char * str) {
     for (size_t i = 0; i < len; i++) {
         if (is_whitespace(str[i]) == 0) {
             index = i;
+            break;
         }
     }
 
-    if (index == -1) {
+    if (index == -1 || index == 0) {
         return str;
     }
 
